@@ -50,14 +50,14 @@ export default {
   
   setup(props, { emit }) {
     // Status disponíveis para mover tarefas
-    const statuses = ['Pendente', 'Em Andamento', 'Concluído'];
+    const statuses = ['Pendente', 'Em Andamento', 'Concluída'];
     
     // Retorna emoji baseado no status
     const getStatusIcon = (status) => {
       const icons = {
         'Pendente': '📝',
         'Em Andamento': '⚡',
-        'Concluído': '✅'
+        'Concluída': '✅'
       };
       return icons[status] || '📋';
     };

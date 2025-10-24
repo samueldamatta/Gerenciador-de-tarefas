@@ -16,7 +16,7 @@ class UpdateTaskRequest extends FormRequest
         return [
             'titulo' => 'sometimes|string|max:255', #Sometimes só valida quando o campo estiver presente
             'descricao' => 'nullable|string',
-            'status' => 'sometimes|in:Pendente,Em Andamento,Concluído',
+            'status' => 'sometimes|in:Pendente,Em Andamento,Concluída',
             'project_id' => 'sometimes|exists:projects,id'
         ];
     }

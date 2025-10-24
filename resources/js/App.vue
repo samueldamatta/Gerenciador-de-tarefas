@@ -100,7 +100,7 @@ export default {
 
 .app-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: purple;
   padding: 1.5rem 2rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -108,6 +108,7 @@ export default {
 .app-header h1 {
   margin: 0;
   font-size: 1.8rem;
+  color: white;
 }
 
 .app-content {

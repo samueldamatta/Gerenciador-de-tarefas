@@ -51,7 +51,7 @@ export default {
     const loading = ref(false);
     
     // Status fixos (hardcoded como pedido no desafio)
-    const statuses = ['Pendente', 'Em Andamento', 'Concluído'];
+    const statuses = ['Pendente', 'Em Andamento', 'Concluída'];
     
     // Carrega tarefas do projeto
     const loadTasks = async () => {
@@ -91,7 +91,9 @@ export default {
         }
       } catch (error) {
         console.error('Erro ao atualizar tarefa:', error);
-        alert('Erro ao atualizar tarefa');
+        console.error('Detalhes do erro:', error.response?.data);
+        console.error('Status HTTP:', error.response?.status);
+        alert(`Erro ao atualizar tarefa: ${error.response?.data?.message || error.message}`);
       }
     };
     

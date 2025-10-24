@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('descricao')->nullable();
-            $table->enum('status', ['Pendente', 'Em Andamento', 'Concluída'])->default('Pendente');
+             $table->enum('status', ['Pendente', 'Em Andamento', 'Concluída'])->default('Pendente');
             $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
             $table->timestamps();
         });

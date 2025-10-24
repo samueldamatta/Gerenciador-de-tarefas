@@ -32,10 +32,10 @@ export const projectService = {
 
 export const taskService = {
     create(data){
-        return api.post(`/projects/${projectId}/tasks`, data);
+        return api.post('/tasks', data);
     },
 
-    updateTask(taskId, data){
+    update(taskId, data){
         return api.put(`/tasks/${taskId}`, data);
     },
 
